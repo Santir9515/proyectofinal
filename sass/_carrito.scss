@@ -1,0 +1,32 @@
+@mixin sizes ($height){
+    height: $height;
+}
+
+.Fondo_pantalla{
+    .carrito{
+        @include sizes(50px);
+        .Subtitulos__main{
+            background-color: $bg2;
+            color: $textcolor;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            
+        }
+    }
+    .Playlist{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 450px;
+        grid-template-areas:    "track1 track2"
+                                "track3 track4 ";
+        .track1{
+            padding-left: 3rem;
+        }
+        .track3{
+            padding-left: 3rem;
+        }
+    }
+
+
+}
